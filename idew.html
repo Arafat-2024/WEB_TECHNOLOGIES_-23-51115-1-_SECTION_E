@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Validation</title>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>Login</h1>
+
+    <form id="LoginForm">
+        <label for="Email">Email:</label>
+        <input type="text" id="Email" name="Email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="errorMessage" style="color: red;"></p>
+    <p>Wrong Attempts count : <span id="counter">0</span></p>
+
+
+</body>
+
+</html>
