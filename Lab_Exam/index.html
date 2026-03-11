@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Registration</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Event Registration</h2>
+
+        <form id="regForm">
+
+            <label>Full Name</label>
+            <input type="text" id="name">
+            <p id="nameError" class="error"></p>
+
+            <label>Email</label>
+            <input type="text" id="email">
+            <p id="emailError" class="error"></p>
+
+            <label>Company / Institution</label>
+            <input type="text" id="company">
+
+            <label>Attendance Type</label><br>
+
+            <input type="radio" name="type" value="Virtual"> Virtual
+            <input type="radio" name="type" value="In-Person"> In-Person
+
+            <p id="typeError" class="error"></p>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <button id="analyticsBtn">Show Event Analytics</button>
+
+        <div id="analytics" class="analytics">
+
+            <p>Total Registrants: <span id="total">0</span></p>
+            <p>Virtual: <span id="virtual">0</span></p>
+            <p>In-Person: <span id="inperson">0</span></p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
