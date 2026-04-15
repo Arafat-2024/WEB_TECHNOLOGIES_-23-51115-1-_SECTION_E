@@ -1,0 +1,51 @@
+ body {
+     font-family: Arial, sans-serif;
+     text-align: center;
+ }
+
+ /* Main title */
+ h1 {
+     margin-bottom: 30px;
+ }
+
+ /* Section titles */
+ h2 {
+     margin-top: 40px;
+ }
+
+ /* Product box */
+ .box {
+     display: inline-block;
+     width: 220px;
+     border: 1px solid black;
+     padding: 10px;
+     margin: 10px;
+     background: #f4f4f4;
+     vertical-align: top;
+ }
+
+ /* Images */
+ .box img {
+     width: 180px;
+     height: auto;
+ }
+
+ /* Hover outline */
+ .box:hover {
+     outline: 3px solid blue;
+     outline-offset: 4px;
+ }
+
+ /* Buy button link */
+ a {
+     display: inline-block;
+     margin-top: 5px;
+     padding: 5px 10px;
+     background: blue;
+     color: white;
+     text-decoration: none;
+ }
+
+ a:hover {
+     background: darkblue;
+ }
