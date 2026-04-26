@@ -43,6 +43,35 @@ if (!$confirmpassword) {
     $hasConfirmPasswordError = false;
 }
 
+// Additional validation: Check if password and confirm password match
+//name must be 3 characters long
+if ($username && strlen($username) < 3) {
+    $_SESSION["usernameerror"] = "Username must be at least 3 characters long";
+    $hasUsernameError = true;
+} else {
+    if (!$hasUsernameError) {
+        unset($_SESSION["usernameerror"]);
+    }
+}
+
+//email must be in valid format
+if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $_SESSION["emailerror"] = "Invalid email format";
+    $hasEmailError = true;
+} else {
+    if (!$hasEmailError) {
+        unset($_SESSION["emailerror"]);
+    }
+}
+
+if ($password !== $confirmpassword) {
+    $_SESSION["confirmpassworderror"] = "Passwords do not match";
+    $hasConfirmPasswordError = true;
+} else {
+
+    unset($_SESSION["confirmpassworderror"]);
+    $hasConfirmPasswordError = false;
+}
 
 if ($hasUsernameError || $hasEmailError || $hasPasswordError || $hasConfirmPasswordError) {
     $_SESSION["username"] = $username;
@@ -52,7 +81,9 @@ if ($hasUsernameError || $hasEmailError || $hasPasswordError || $hasConfirmPassw
     header("Location: ../view/registration.php");
     exit();
 } else {
-    echo "<h1>Validation successful</h1>";
-    Header("Location: ../View/dashboard.php");
+    $_SESSION["username"] = $username;
+    $_SESSION["email"] = $email;
+    $_SESSION["isloggedin"] = true;
+    header("Location: ../view/dashbord.php");
     exit();
 }

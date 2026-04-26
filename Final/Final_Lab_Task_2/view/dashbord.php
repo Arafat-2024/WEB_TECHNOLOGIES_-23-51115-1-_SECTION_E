@@ -2,7 +2,7 @@
 session_start();
 $username = $_SESSION["username"] ?? "";
 
-$isLoggedIn = $_SESSION["isloggedIn"] ?? false;
+$isLoggedIn = $_SESSION["isloggedin"] ?? false;
 if (!$isLoggedIn) {
     header("Location: registration.php");
     exit();

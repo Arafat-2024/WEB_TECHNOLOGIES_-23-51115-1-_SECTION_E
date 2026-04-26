@@ -5,16 +5,12 @@ $emailError = $_SESSION["emailerror"] ?? "";
 $passwordError = $_SESSION["passworderror"] ?? "";
 $confirmPasswordError = $_SESSION["confirmpassworderror"] ?? "";
 
-$username = $_SESSION["username"] ?? "";
-$email = $_SESSION["email"] ?? "";
-//$password = $_SESSION["password"] ?? "";
-//$confirmpassword = $_SESSION["confirmpassword"] ?? "";
 
-$loginError = $_SESSION["loginerror"] ?? "";
+
 $isLoggedIn = $_SESSION["isloggedin"] ?? false;
 
 if ($isLoggedIn) {
-    header("Location: ../View/dashboard.php");
+    header("Location: ../view/dashbord.php");
     exit();
 }
 ?>
