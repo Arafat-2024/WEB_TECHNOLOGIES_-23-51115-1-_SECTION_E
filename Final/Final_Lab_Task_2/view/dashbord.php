@@ -17,7 +17,9 @@ if (!$isLoggedIn) {
 <body>
     <h1>hello,<?php echo htmlspecialchars($username); ?> Welcome to the Dashboard!</h1>
     <p>This is a protected area that only logged-in users can access.</p>
-    <a href="../Controller/logout.php">Logout</a>
+    <a href="../Controller/logout.php" style="margin-right: 20px;">Logout</a>
+
+    <a href="../view/settingspage.php" style="margin-right: 20px;">Settings</a>
 </body>
 
 </html>
